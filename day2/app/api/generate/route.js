@@ -46,7 +46,6 @@ export async function POST(req) {
     }
     `;
 
-    // ✅ FIXED URL: Using v1beta and gemini-1.5-flash
     const GEMINI_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${process.env.GOOGLE_API_KEY}`;
 
     const geminiRes = await fetch(GEMINI_URL, {
@@ -67,7 +66,6 @@ export async function POST(req) {
         throw new Error("Gemini API returned invalid JSON structure.");
     }
 
-    // Check if we actually got a candidate
     if (!geminiData.candidates || geminiData.candidates.length === 0) {
         console.error("❌ Gemini Error Debug:", JSON.stringify(geminiData, null, 2));
         if (geminiData.promptFeedback) {
@@ -76,10 +74,7 @@ export async function POST(req) {
         throw new Error("Gemini returned no candidates.");
     }
 
-    // Extract the text content
     let rawText = geminiData.candidates[0].content.parts[0].text;
-    
-    // 🧹 CLEANUP: Remove markdown code blocks if present
     rawText = rawText.replace(/```json/g, "").replace(/```/g, "").trim();
 
     console.log("🤖 Raw AI Text:", rawText);
@@ -89,7 +84,6 @@ export async function POST(req) {
         aiResponse = JSON.parse(rawText);
     } catch (e) {
         console.error("❌ Failed to parse internal AI JSON. Raw text was:", rawText);
-        // Emergency Fallback
         aiResponse = { 
             speech: "System glitch. Say that again, Smarty?", 
             order: currentOrder, 
@@ -102,8 +96,8 @@ export async function POST(req) {
     // --------------------------------------------------------
     if (aiResponse.isComplete) {
         const filePath = path.join(process.cwd(), "orders.json");
-        const newOrder = { ...aiResponse.order, timestamp: new Date().toISOString() };
         
+        // 1. Read existing orders first
         let orders = [];
         try {
             if (fs.existsSync(filePath)) {
@@ -112,16 +106,25 @@ export async function POST(req) {
             }
         } catch (e) { console.log("New order file created"); }
 
+        // 2. Generate Simple ID (Length + 1)
+        const nextId = orders.length + 1;
+
+        const newOrder = { 
+            id: nextId, // ✅ Simple ID: 1, 2, 3...
+            ...aiResponse.order, 
+            timestamp: new Date().toISOString() 
+        };
+
         orders.push(newOrder);
         fs.writeFileSync(filePath, JSON.stringify(orders, null, 2));
-        console.log("💾 Order Saved to orders.json");
+        console.log(`💾 Order #${nextId} Saved to orders.json`);
     }
 
     // --------------------------------------------------------
     // 3. MURF (TTS)
     // --------------------------------------------------------
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 30000); // 30s timeout
+    const timeoutId = setTimeout(() => controller.abort(), 30000); 
 
     try {
         const textToSpeak = aiResponse.speech || "Processing...";
