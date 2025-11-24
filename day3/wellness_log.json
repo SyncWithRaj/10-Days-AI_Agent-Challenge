@@ -1,0 +1,50 @@
+[
+  {
+    "id": "LOG-MID2J3HV",
+    "timestamp": "2025-11-24T11:33:22.675Z",
+    "biometrics": {
+      "mood_status": "optimistic",
+      "mood_score": 8,
+      "energy_level": "HIGH",
+      "stress_load": 20,
+      "sleep_status": "fully rested"
+    },
+    "directives": [
+      {
+        "priority": "MED",
+        "task": "record a day three video"
+      },
+      {
+        "priority": "HIGH",
+        "task": "write the LinkedIn post"
+      }
+    ],
+    "analysis": {
+      "recommendation": "Your high energy and low stress levels are ideal. Begin with your high priority task: writing the LinkedIn post, to leverage this optimal state."
+    }
+  },
+  {
+    "id": "LOG-MID2MY8A",
+    "timestamp": "2025-11-24T11:36:22.474Z",
+    "biometrics": {
+      "mood_status": "optimistic",
+      "mood_score": 8,
+      "energy_level": "HIGH",
+      "stress_load": 20,
+      "sleep_status": "Rested"
+    },
+    "directives": [
+      {
+        "priority": "HIGH",
+        "task": "Record the day three video"
+      },
+      {
+        "priority": "MED",
+        "task": "Write the LinkedIn post"
+      }
+    ],
+    "analysis": {
+      "recommendation": "With HIGH energy and low stress, prioritize the 'record day three video' task to leverage your current peak performance."
+    }
+  }
+]
