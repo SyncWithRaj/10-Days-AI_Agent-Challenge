@@ -1,0 +1,20 @@
+{
+  "company": "boAt Lifestyle",
+  "description": "India's No.1 Earwear Audio Brand. We sell high-quality, affordable audio products and smartwatches designed for the youth.",
+  "products": [
+    { "name": "Airdopes 141", "price": "₹1,299", "features": "80H Playback, ENx Technology, Beast Mode" },
+    { "name": "Rockerz 255 Pro+", "price": "₹1,599", "features": "40H Playback, ASAP Charge, IPX7 Water Resistance" },
+    { "name": "Stone 350 Speaker", "price": "₹1,499", "features": "10W RMS Sound, 12H Playback, Rugged Design" },
+    { "name": "Wave Call Smartwatch", "price": "₹1,999", "features": "Bluetooth Calling, HD Display, Health Monitoring" }
+  ],
+  "corporate_offers": [
+    { "tier": "Starter Pack", "min_qty": "50 Units", "discount": "10% OFF" },
+    { "tier": "Corporate Bulk", "min_qty": "200 Units", "discount": "20% OFF + Custom Branding" },
+    { "tier": "Enterprise Partner", "min_qty": "500+ Units", "discount": "Flat 30% OFF + Dedicated Manager" }
+  ],
+  "faqs": [
+    { "q": "Do you do custom branding?", "a": "Yes! For orders above 200 units, we can print your company logo on the products." },
+    { "q": "What is the warranty period?", "a": "All boAt products come with a standard 1-year warranty." },
+    { "q": "How long does delivery take?", "a": "For bulk corporate orders, we typically deliver within 5-7 business days across India." }
+  ]
+}
