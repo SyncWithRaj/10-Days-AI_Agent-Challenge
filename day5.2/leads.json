@@ -1,45 +1,5 @@
 [
   {
-    "id": "LEAD-1764160282462",
-    "timestamp": "2025-11-26T12:31:22.462Z",
-    "name": "Raj",
-    "role": "senior software developer",
-    "company": "Nanotechnology",
-    "team_size": "25 developers",
-    "use_case": "convert backend to a microservice",
-    "timeline": "next week"
-  },
-  {
-    "id": "LEAD-1764161351804",
-    "timestamp": "2025-11-26T12:49:11.805Z",
-    "name": "Raj",
-    "role": "",
-    "company": "Nexus Dynamics",
-    "team_size": "60 developers",
-    "use_case": "Scaling backend, managing API documentation across teams.",
-    "timeline": "next week"
-  },
-  {
-    "id": "LEAD-1764161814325",
-    "timestamp": "2025-11-26T12:56:54.325Z",
-    "name": "Raj",
-    "role": "lead architect",
-    "company": "Nexus Dynamics",
-    "team_size": "60 developers",
-    "use_case": "Scaling up backend and needing better API documentation management across teams.",
-    "timeline": "next week"
-  },
-  {
-    "id": "BOAT-1764165503290",
-    "timestamp": "2025-11-26T13:58:23.290Z",
-    "name": "Raj",
-    "role": "HR Head",
-    "company": "Fintech Solutions",
-    "quantity": "250",
-    "requirement": "Diwali gifts for employees, Rockerz 255 Pro+",
-    "timeline": "October 15th"
-  },
-  {
     "id": "BOAT-1764166563559",
     "timestamp": "2025-11-26T14:16:03.560Z",
     "name": "Raj",
