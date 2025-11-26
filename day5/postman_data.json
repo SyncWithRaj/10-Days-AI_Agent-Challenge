@@ -1,0 +1,16 @@
+{
+  "company": "Postman",
+  "description": "An API platform for building and using APIs. It simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.",
+  "pricing": [
+    { "tier": "Free", "cost": "$0", "details": "For individuals and small teams up to 3 users. Includes basic API client and documentation." },
+    { "tier": "Basic", "cost": "$14/user/month", "details": "For teams collaborating on APIs. Includes 30 days of collection recovery and 10 integrations." },
+    { "tier": "Professional", "cost": "$29/user/month", "details": "For teams that need central management. Includes Single Sign-On (SSO) and basic roles." },
+    { "tier": "Enterprise", "cost": "Custom", "details": "For organizations ensuring security and governance. Includes domain capture and advanced security." }
+  ],
+  "faqs": [
+    { "q": "What is Postman used for?", "a": "Postman is an API platform for building and using APIs. It simplifies the API lifecycle, allowing you to send requests, create documentation, and set up automated testing." },
+    { "q": "Who is Postman for?", "a": "It's built for developers, QA engineers, and product managers. Basically, anyone who interacts with APIs." },
+    { "q": "Do you have a free trial?", "a": "Yes, Postman offers a forever-free plan for up to 3 users. You can also try the Professional plan features with a trial." },
+    { "q": "Can I collaborate with my team?", "a": "Absolutely. Our Workspaces allow real-time collaboration, commenting, and version control for your API collections." }
+  ]
+}
