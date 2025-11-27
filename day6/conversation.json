@@ -1,0 +1,134 @@
+[
+  {
+    "caseId": "STB-8821-X",
+    "role": "user",
+    "message": "Start Call",
+    "timestamp": "2025-11-27T14:18:57.443Z"
+  },
+  {
+    "caseId": "STB-8821-X",
+    "role": "agent",
+    "message": "This is Agent Carter from Sentinel Trust Bank. I'm calling about a suspicious transaction on card 4242. Is this John?",
+    "timestamp": "2025-11-27T14:18:57.443Z"
+  },
+  {
+    "caseId": "STB-8821-X",
+    "role": "user",
+    "message": "Yes, this is john.",
+    "timestamp": "2025-11-27T14:19:24.473Z"
+  },
+  {
+    "caseId": "STB-8821-X",
+    "role": "agent",
+    "message": "Thank you. For security, please answer your security question: What is the name of your first pet?",
+    "timestamp": "2025-11-27T14:19:24.473Z"
+  },
+  {
+    "caseId": "STB-8821-X",
+    "role": "user",
+    "message": "First pet name was Max.",
+    "timestamp": "2025-11-27T14:19:48.774Z"
+  },
+  {
+    "caseId": "STB-8821-X",
+    "role": "agent",
+    "message": "Identity verified. We flagged a transaction at Apple Store NYC for $1,299.00 in New York, USA. Did you authorize this?",
+    "timestamp": "2025-11-27T14:19:48.774Z"
+  },
+  {
+    "caseId": "STB-8821-X",
+    "role": "user",
+    "message": "Yes, I bought a new laptop today morning.",
+    "timestamp": "2025-11-27T14:20:21.926Z"
+  },
+  {
+    "caseId": "STB-8821-X",
+    "role": "agent",
+    "message": "Thank you. I have marked this transaction as SAFE. The hold is lifted.",
+    "timestamp": "2025-11-27T14:20:21.926Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "user",
+    "message": "Call Connected",
+    "timestamp": "2025-11-27T14:21:34.105Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "agent",
+    "message": "This is Agent Carter from Sentinel Trust Bank. I'm calling about a suspicious transaction on card 1198. Is this Sarah?",
+    "timestamp": "2025-11-27T14:21:34.105Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "user",
+    "message": "Yes, this is sarah.",
+    "timestamp": "2025-11-27T14:22:00.877Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "agent",
+    "message": "Thank you. For security, please answer your security question: What is your mother's maiden name?",
+    "timestamp": "2025-11-27T14:22:00.877Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "user",
+    "message": "Call Connected",
+    "timestamp": "2025-11-27T14:23:44.421Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "agent",
+    "message": "This is Agent Carter from Sentinel Trust Bank. I'm calling about a suspicious transaction on card 1198. Is this Sarah?",
+    "timestamp": "2025-11-27T14:23:44.421Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "user",
+    "message": "Call Connected",
+    "timestamp": "2025-11-27T14:26:58.107Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "agent",
+    "message": "This is Agent Carter from Sentinel Trust Bank. I'm calling about a suspicious transaction on card 1198. Is this Sarah?",
+    "timestamp": "2025-11-27T14:26:58.107Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "user",
+    "message": "Yes, this is sarah.",
+    "timestamp": "2025-11-27T14:27:24.675Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "agent",
+    "message": "Thank you. For security, please answer your security question: What is your mother's maiden name?",
+    "timestamp": "2025-11-27T14:27:24.675Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "user",
+    "message": "My mother. Maiden name is Williams.",
+    "timestamp": "2025-11-27T14:27:49.507Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "agent",
+    "message": "Identity verified. We flagged a transaction at Cartier - Paris Champs-Élysées for €4,500.00 in Paris, France. Did you authorize this?",
+    "timestamp": "2025-11-27T14:27:49.507Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "user",
+    "message": "Yes, I authorized this.",
+    "timestamp": "2025-11-27T14:28:21.191Z"
+  },
+  {
+    "caseId": "STB-9940-Z",
+    "role": "agent",
+    "message": "Thank you. I have marked this transaction as SAFE. The hold is lifted.",
+    "timestamp": "2025-11-27T14:28:21.191Z"
+  }
+]
