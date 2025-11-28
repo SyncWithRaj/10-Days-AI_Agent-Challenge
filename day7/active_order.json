@@ -1,0 +1,38 @@
+{
+  "orderId": "ORD-1764339232678",
+  "timestamp": "2025-11-28T14:13:52.678Z",
+  "items": [
+    {
+      "id": "itm_05",
+      "name": "Penne Pasta",
+      "price": 150,
+      "qty": 1
+    },
+    {
+      "id": "itm_04",
+      "name": "Tomato Puree",
+      "price": 45,
+      "qty": 1
+    },
+    {
+      "id": "itm_02",
+      "name": "Amul Cheese",
+      "price": 120,
+      "qty": 1
+    },
+    {
+      "id": "itm_11",
+      "name": "Thums Up",
+      "price": 40,
+      "qty": 2
+    },
+    {
+      "id": "itm_12",
+      "name": "Choco Chip Cookie",
+      "price": 50,
+      "qty": 1
+    }
+  ],
+  "total": "445.00",
+  "status": "RECEIVED"
+}

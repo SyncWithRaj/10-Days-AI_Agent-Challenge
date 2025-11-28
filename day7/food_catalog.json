@@ -1,0 +1,16 @@
+[
+  { "id": "itm_01", "name": "Sourdough Bread", "price": 80, "category": "Bakery", "tags": ["sandwich", "toast", "breakfast"] },
+  { "id": "itm_02", "name": "Amul Cheese", "price": 120, "category": "Dairy", "tags": ["sandwich", "pasta", "burger"] },
+  { "id": "itm_03", "name": "Toned Milk", "price": 65, "category": "Dairy", "tags": ["cereal", "coffee", "tea"] },
+  { "id": "itm_04", "name": "Tomato Puree", "price": 45, "category": "Pantry", "tags": ["pasta", "pizza", "curry"] },
+  { "id": "itm_05", "name": "Penne Pasta", "price": 150, "category": "Pantry", "tags": ["pasta", "italian"] },
+  { "id": "itm_06", "name": "Fresh Basil", "price": 30, "category": "Produce", "tags": ["pasta", "pizza", "salad"] },
+  { "id": "itm_07", "name": "Peanut Butter", "price": 180, "category": "Pantry", "tags": ["sandwich", "snack", "protein"] },
+  { "id": "itm_08", "name": "Fruit Jam", "price": 140, "category": "Pantry", "tags": ["sandwich", "toast"] },
+  { "id": "itm_09", "name": "Farmhouse Pizza", "price": 399, "category": "Prepared", "tags": ["dinner", "party", "junk"] },
+  { "id": "itm_10", "name": "Veggie Burger", "price": 129, "category": "Prepared", "tags": ["lunch", "dinner"] },
+  { "id": "itm_11", "name": "Thums Up", "price": 40, "category": "Beverage", "tags": ["drink", "soda"] },
+  { "id": "itm_12", "name": "Choco Chip Cookie", "price": 50, "category": "Snack", "tags": ["dessert"] },
+  { "id": "itm_13", "name": "Paneer", "price": 90, "category": "Dairy", "tags": ["curry", "sandwich"] },
+  { "id": "itm_14", "name": "Butter", "price": 55, "category": "Dairy", "tags": ["sandwich", "toast", "cooking"] }
+]
