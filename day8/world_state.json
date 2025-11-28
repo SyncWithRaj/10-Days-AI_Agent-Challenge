@@ -1,0 +1,15 @@
+{
+  "player": {
+    "name": "Will",
+    "hp": 100,
+    "max_hp": 100,
+    "sanity": 100,
+    "inventory": ["Walkie Talkie", "Wrist Rocket", "Eggo Waffle"]
+  },
+  "location": {
+    "name": "Mikes Basement",
+    "description": "A messy basement filled with D&D figures and empty soda cans."
+  },
+  "game_log": [],
+  "status_effects": []
+}
