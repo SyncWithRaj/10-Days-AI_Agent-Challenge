@@ -1,14 +1,14 @@
 {
   "player": {
-    "name": "Will",
+    "name": "Traveler",
     "hp": 100,
     "max_hp": 100,
-    "sanity": 100,
-    "inventory": ["Walkie Talkie", "Wrist Rocket", "Eggo Waffle"]
+    "gold": 10,
+    "inventory": ["Rusty Sword", "Torch"]
   },
   "location": {
-    "name": "Mikes Basement",
-    "description": "A messy basement filled with D&D figures and empty soda cans."
+    "name": "Whispering Crypt",
+    "description": "A cold, stone chamber."
   },
   "game_log": [],
   "status_effects": []
