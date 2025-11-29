@@ -1,0 +1,130 @@
+[
+  {
+    "id": "ORD-1764440814244",
+    "items": [
+      {
+        "id": "p_02",
+        "name": "Neon Street Tee",
+        "price": 899,
+        "currency": "INR",
+        "category": "apparel",
+        "color": "white",
+        "image": "👕",
+        "qty": 2
+      },
+      {
+        "id": "p_05",
+        "name": "Neural Cap",
+        "price": 699,
+        "currency": "INR",
+        "category": "accessories",
+        "color": "blue",
+        "image": "🧢",
+        "qty": 1
+      },
+      {
+        "id": "p_18",
+        "name": "Sport Tank Top",
+        "price": 650,
+        "currency": "INR",
+        "category": "apparel",
+        "color": "blue",
+        "image": "🎽",
+        "qty": 3
+      },
+      {
+        "id": "p_23",
+        "name": "Silk Scarf",
+        "price": 999,
+        "currency": "INR",
+        "category": "accessories",
+        "color": "red",
+        "image": "🧣",
+        "qty": 1
+      },
+      {
+        "id": "p_15",
+        "name": "Leather Boots",
+        "price": 5200,
+        "currency": "INR",
+        "category": "footwear",
+        "color": "brown",
+        "image": "🥾",
+        "qty": 1
+      },
+      {
+        "id": "p_28",
+        "name": "Daily Sneakers",
+        "price": 2000,
+        "currency": "INR",
+        "category": "footwear",
+        "color": "gray",
+        "image": "👟",
+        "qty": 1
+      }
+    ],
+    "total": 12646,
+    "currency": "INR",
+    "status": "CONFIRMED",
+    "created_at": "2025-11-29T18:26:54.244Z"
+  },
+  {
+    "id": "ORD-1764442186055",
+    "items": [
+      {
+        "id": "p_02",
+        "name": "Neon Street Tee",
+        "price": 899,
+        "currency": "INR",
+        "category": "apparel",
+        "color": "white",
+        "image": "👕",
+        "qty": 2
+      },
+      {
+        "id": "p_38",
+        "name": "Running Cap",
+        "price": 550,
+        "currency": "INR",
+        "category": "accessories",
+        "color": "white",
+        "image": "🧢",
+        "qty": 1
+      },
+      {
+        "id": "p_18",
+        "name": "Sport Tank Top",
+        "price": 650,
+        "currency": "INR",
+        "category": "apparel",
+        "color": "blue",
+        "image": "🎽",
+        "qty": 3
+      },
+      {
+        "id": "p_04",
+        "name": "Holo-Sneakers",
+        "price": 4500,
+        "currency": "INR",
+        "category": "footwear",
+        "color": "silver",
+        "image": "👟",
+        "qty": 1
+      },
+      {
+        "id": "p_15",
+        "name": "Leather Boots",
+        "price": 5200,
+        "currency": "INR",
+        "category": "footwear",
+        "color": "brown",
+        "image": "🥾",
+        "qty": 1
+      }
+    ],
+    "total": 13998,
+    "currency": "INR",
+    "status": "CONFIRMED",
+    "created_at": "2025-11-29T18:49:46.055Z"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  { "id": "p_01", "name": "Cyberpunk Hoodie", "price": 2499, "currency": "INR", "category": "apparel", "color": "black", "image": "🧥" },
+  { "id": "p_02", "name": "Neon Street Tee", "price": 899, "currency": "INR", "category": "apparel", "color": "white", "image": "👕" },
+  { "id": "p_03", "name": "Techwear Cargo Pants", "price": 3200, "currency": "INR", "category": "apparel", "color": "black", "image": "👖" },
+  { "id": "p_04", "name": "Holo-Sneakers", "price": 4500, "currency": "INR", "category": "footwear", "color": "silver", "image": "👟" },
+  { "id": "p_05", "name": "Neural Cap", "price": 699, "currency": "INR", "category": "accessories", "color": "blue", "image": "🧢" },
+  { "id": "p_06", "name": "Smart Shades", "price": 1500, "currency": "INR", "category": "accessories", "color": "black", "image": "🕶️" },
+  { "id": "p_07", "name": "Vintage Denim Jacket", "price": 2800, "currency": "INR", "category": "apparel", "color": "blue", "image": "🧥" },
+  { "id": "p_08", "name": "Running Shorts", "price": 799, "currency": "INR", "category": "apparel", "color": "red", "image": "🩳" },
+
+  { "id": "p_09", "name": "Urban Zip Jacket", "price": 3100, "currency": "INR", "category": "apparel", "color": "gray", "image": "🧥" },
+  { "id": "p_10", "name": "Minimalist Tee", "price": 750, "currency": "INR", "category": "apparel", "color": "cream", "image": "👕" },
+  { "id": "p_11", "name": "Carbon Track Pants", "price": 1900, "currency": "INR", "category": "apparel", "color": "black", "image": "👖" },
+  { "id": "p_12", "name": "Retro Sneakers", "price": 3800, "currency": "INR", "category": "footwear", "color": "white", "image": "👟" },
+  { "id": "p_13", "name": "Athletic Cap", "price": 650, "currency": "INR", "category": "accessories", "color": "black", "image": "🧢" },
+  { "id": "p_14", "name": "Classic Sunglasses", "price": 1300, "currency": "INR", "category": "accessories", "color": "brown", "image": "🕶️" },
+  
+  { "id": "p_15", "name": "Leather Boots", "price": 5200, "currency": "INR", "category": "footwear", "color": "brown", "image": "🥾" },
+  { "id": "p_16", "name": "Streetwear Beanie", "price": 499, "currency": "INR", "category": "accessories", "color": "black", "image": "🧢" },
+  { "id": "p_17", "name": "Cotton Hoodie", "price": 2200, "currency": "INR", "category": "apparel", "color": "green", "image": "🧥" },
+  { "id": "p_18", "name": "Sport Tank Top", "price": 650, "currency": "INR", "category": "apparel", "color": "blue", "image": "🎽" },
+  { "id": "p_19", "name": "Training Shorts", "price": 850, "currency": "INR", "category": "apparel", "color": "black", "image": "🩳" },
+
+  { "id": "p_20", "name": "High-Top Trainers", "price": 3400, "currency": "INR", "category": "footwear", "color": "black", "image": "👟" },
+  { "id": "p_21", "name": "Mesh Running Shoes", "price": 2900, "currency": "INR", "category": "footwear", "color": "white", "image": "👟" },
+  { "id": "p_22", "name": "Winter Gloves", "price": 550, "currency": "INR", "category": "accessories", "color": "gray", "image": "🧤" },
+  { "id": "p_23", "name": "Silk Scarf", "price": 999, "currency": "INR", "category": "accessories", "color": "red", "image": "🧣" },
+  { "id": "p_24", "name": "Wool Shawl", "price": 1399, "currency": "INR", "category": "accessories", "color": "brown", "image": "🧣" },
+
+  { "id": "p_25", "name": "Oversized Flannel Shirt", "price": 1800, "currency": "INR", "category": "apparel", "color": "red", "image": "👔" },
+  { "id": "p_26", "name": "Slim Fit Jeans", "price": 2200, "currency": "INR", "category": "apparel", "color": "blue", "image": "👖" },
+  { "id": "p_27", "name": "Casual Loafers", "price": 2600, "currency": "INR", "category": "footwear", "color": "tan", "image": "👞" },
+  { "id": "p_28", "name": "Daily Sneakers", "price": 2000, "currency": "INR", "category": "footwear", "color": "gray", "image": "👟" },
+
+  { "id": "p_29", "name": "Laptop Backpack", "price": 1599, "currency": "INR", "category": "accessories", "color": "black", "image": "🎒" },
+  { "id": "p_30", "name": "Travel Duffel Bag", "price": 2400, "currency": "INR", "category": "accessories", "color": "brown", "image": "🧳" },
+
+  { "id": "p_31", "name": "Sports Hoodie", "price": 2100, "currency": "INR", "category": "apparel", "color": "orange", "image": "🧥" },
+  { "id": "p_32", "name": "Cotton Polo T-Shirt", "price": 1100, "currency": "INR", "category": "apparel", "color": "navy", "image": "👕" },
+  { "id": "p_33", "name": "Designer Kurta", "price": 2300, "currency": "INR", "category": "ethnic", "color": "cream", "image": "👘" },
+  { "id": "p_34", "name": "Ethnic Mojari", "price": 1600, "currency": "INR", "category": "footwear", "color": "gold", "image": "🥿" },
+
+  { "id": "p_35", "name": "Women’s Handbag", "price": 2800, "currency": "INR", "category": "accessories", "color": "pink", "image": "👜" },
+  { "id": "p_36", "name": "Summer Dress", "price": 1999, "currency": "INR", "category": "apparel", "color": "yellow", "image": "👗" },
+  { "id": "p_37", "name": "Formal Coat", "price": 3500, "currency": "INR", "category": "apparel", "color": "black", "image": "🧥" },
+  { "id": "p_38", "name": "Running Cap", "price": 550, "currency": "INR", "category": "accessories", "color": "white", "image": "🧢" }
+]
