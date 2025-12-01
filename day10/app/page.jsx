@@ -518,7 +518,7 @@ export default function Home() {
         <audio ref={audioRef} className="hidden" />
         
         {/* AUDIO FOR AUDIENCE CLAP */}
-        <audio ref={clapRef} src="https://www.soundjay.com/human/sounds/applause-01.mp3" className="hidden" />
+        {/* <audio ref={clapRef} src="https://www.soundjay.com/human/sounds/applause-01.mp3" className="hidden" /> */}
 
         <style jsx global>{`
             @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;700;900&display=swap');
