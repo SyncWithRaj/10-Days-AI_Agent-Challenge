@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { 
   OrbitControls, Environment, SpotLight, Text, 
-  Cylinder, Sphere, Box, Torus, RoundedBox, Html, Stars, Cloud
+  Cylinder, Sphere, Box, Torus, RoundedBox, Html
 } from "@react-three/drei";
 import { Mic, Play, Power, Radio, Volume2, Zap } from "lucide-react";
 
@@ -40,7 +40,7 @@ function TvScreen({ text }) {
       </Text>
 
       {/* --- SCREEN STANDS (Legs) --- */}
-      <group position={[0, -4.5, 0]}> {/* Move reference to floor */}
+      <group position={[0, -4.5, 0]}>
         {/* Left Leg */}
         <Cylinder args={[0.3, 0.3, 6]} position={[-4, 1.5, -0.2]}>
             <meshStandardMaterial color="#111" metalness={0.8} />
@@ -58,71 +58,62 @@ function TvScreen({ text }) {
 }
 
 // ==========================================
-// TALL PODIUM TABLE (HOST DESK)
+// HOST DESK WITH BANNER
 // ==========================================
 function HostDesk() {
   return (
     <group position={[-3, 0, 0.8]} rotation={[0, 0.3, 0]}>
-        {/* Main Body - TALL & NARROW PODIUM */}
-        <Box args={[2.0, 2.0, 1.2]} position={[0, 1.0, 0]} castShadow receiveShadow>
+        {/* Main Body */}
+        <Box args={[3.8, 1.1, 1.5]} position={[0, 0.55, 0]} castShadow receiveShadow>
             <meshStandardMaterial color="#2c1a12" roughness={0.4} metalness={0.3} />
         </Box>
         {/* Top Slab */}
-        <Box args={[2.2, 0.1, 1.4]} position={[0, 2.05, 0]} castShadow>
+        <Box args={[4.0, 0.1, 1.7]} position={[0, 1.15, 0]} castShadow>
             <meshStandardMaterial color="#4e342e" roughness={0.2} />
         </Box>
 
-        {/* --- THE BANNER (Adjusted for narrow width) --- */}
-        <group position={[0, 1.2, 0.61]}>
+        {/* BANNER */}
+        <group position={[0, 0.55, 0.76]}>
             <mesh>
-                <planeGeometry args={[1.8, 0.8]} />
+                <planeGeometry args={[3.6, 0.9]} />
                 <meshStandardMaterial color="#000" metalness={0.8} roughness={0.2} />
             </mesh>
             <mesh position={[0, 0, -0.01]}>
-                <boxGeometry args={[1.9, 0.9, 0.05]} />
+                <boxGeometry args={[3.7, 1.0, 0.05]} />
                 <meshStandardMaterial color="#ffbd59" metalness={1} roughness={0.1} />
             </mesh>
             
             <Text 
-                fontSize={0.20} 
+                fontSize={0.30} 
                 color="#000000" 
-                position={[0.15, 0, 0.02]}
+                position={[0.3, 0, 0.02]}
                 anchorX="center" 
                 anchorY="middle"
-                outlineWidth={0.005}
+                outlineWidth={0.01}
                 outlineColor="#000"
-                maxWidth={1.5}
-                textAlign="center"
-                lineHeight={1}
             >
                 MURF'S GOT LATENT
             </Text>
 
-            {/* 3D Mic Logo on Banner */}
-            <group position={[-0.7, 0, 0.1]} rotation={[0, 0, -0.2]}>
-                <Sphere args={[0.12]} position={[0, 0.15, 0]}><meshStandardMaterial color="#ef4444" metalness={0.5} /></Sphere>
-                <Cylinder args={[0.04, 0.03, 0.25]} position={[0, -0.1, 0]}><meshStandardMaterial color="#000000" metalness={1} /></Cylinder>
+            <group position={[-1.4, 0, 0.1]} rotation={[0, 0, -0.2]}>
+                <Sphere args={[0.15]} position={[0, 0.15, 0]}><meshStandardMaterial color="#ef4444" metalness={0.5} /></Sphere>
+                <Cylinder args={[0.05, 0.04, 0.3]} position={[0, -0.1, 0]}><meshStandardMaterial color="#000000" metalness={1} /></Cylinder>
             </group>
         </group>
 
-        {/* -- TABLE ITEMS (Moved Up) -- */}
-        {/* Script */}
-        <Box args={[0.5, 0.05, 0.7]} position={[-0.5, 2.12, 0.2]} rotation={[0, 0.2, 0]}>
+        {/* Props */}
+        <Box args={[0.6, 0.05, 0.8]} position={[-0.8, 1.22, 0.3]} rotation={[0, 0.2, 0]}>
             <meshStandardMaterial color="#ffffff" />
         </Box>
-        {/* Water Bottle */}
-        <group position={[0.7, 2.1, 0.3]}>
-            <Cylinder args={[0.08, 0.08, 0.4]} position={[0, 0.2, 0]}>
+        <group position={[1.2, 1.2, 0.4]}>
+            <Cylinder args={[0.1, 0.1, 0.5]} position={[0, 0.25, 0]}>
                 <meshPhysicalMaterial color="#aedfff" transmission={0.9} opacity={0.8} transparent roughness={0.1} />
             </Cylinder>
-            <Cylinder args={[0.08, 0.08, 0.04]} position={[0, 0.42, 0]}>
-                <meshStandardMaterial color="#222" />
-            </Cylinder>
+            <Cylinder args={[0.1, 0.1, 0.05]} position={[0, 0.52, 0]}><meshStandardMaterial color="#222" /></Cylinder>
         </group>
-        {/* Desk Mic */}
-        <group position={[0, 2.1, -0.3]} rotation={[0, 0, 0]}>
-            <Cylinder args={[0.02, 0.02, 0.4]} position={[0, 0.2, 0]}><meshStandardMaterial color="#111" /></Cylinder>
-            <Sphere args={[0.08]} position={[0, 0.4, 0]}><meshStandardMaterial color="#333" metalness={0.8} roughness={0.4} /></Sphere>
+        <group position={[0.2, 1.2, -0.2]} rotation={[0, -0.2, 0]}>
+            <Cylinder args={[0.02, 0.02, 0.3]} position={[0, 0.15, 0]}><meshStandardMaterial color="#111" /></Cylinder>
+            <Sphere args={[0.08]} position={[0, 0.35, 0]}><meshStandardMaterial color="#333" metalness={0.8} roughness={0.4} /></Sphere>
             <Cylinder args={[0.15, 0.15, 0.05]} position={[0, 0, 0]}><meshStandardMaterial color="#111" /></Cylinder>
         </group>
     </group>
@@ -130,87 +121,47 @@ function HostDesk() {
 }
 
 // ==========================================
-// TALL CHARACTERS
-// ==========================================
-// ==========================================
-// TALL HOST DROID (With Legs & Arms)
+// TALL HOST DROID (Gold/Grey)
 // ==========================================
 function HostDroid({ position, isTalking }) {
   const group = useRef();
-  
   useFrame((state) => {
     if (!group.current) return;
     const t = state.clock.getElapsedTime();
-    // Breathing motion (Body moves slightly)
+    // Breathing motion
     group.current.position.y = position[1] + Math.sin(t * 1.5) * 0.03;
-    
-    // Arm swing (Natural idle)
-    const armRotation = Math.sin(t * 1.5) * 0.1;
-    // We can target specific children indices if we want complex anims, 
-    // but here we keep it subtle on the main group or specific parts if refs were used.
     
     if (isTalking) {
         group.current.rotation.y = Math.sin(t * 10) * 0.1;
-        // Head bob (Child index 0 is the Head Group)
-        group.current.children[0].position.y = 3.9 + Math.sin(t * 15) * 0.05;
+        // Head bob
+        group.current.children[0].position.y = 2.4 + Math.sin(t * 15) * 0.05;
     } else {
         group.current.rotation.y = 0;
-        group.current.children[0].position.y = 3.9;
+        group.current.children[0].position.y = 2.4;
     }
   });
 
   return (
     <group ref={group} position={position}>
-        {/* --- HEAD (Shifted up to Y=3.9) --- */}
-        <group position={[0, 3.9, 0]}>
+        {/* Head */}
+        <group position={[0, 2.4, 0]}>
             <RoundedBox args={[0.7, 0.9, 0.7]} radius={0.1}>
                 <meshStandardMaterial color="#e0e0e0" metalness={0.7} roughness={0.3} />
             </RoundedBox>
-            {/* Glowing Eyes */}
             <mesh position={[-0.15, 0.1, 0.36]}><circleGeometry args={[0.08]} /><meshBasicMaterial color={isTalking ? "#ffbd59" : "#333"} toneMapped={false} /></mesh>
             <mesh position={[0.15, 0.1, 0.36]}><circleGeometry args={[0.08]} /><meshBasicMaterial color={isTalking ? "#ffbd59" : "#333"} toneMapped={false} /></mesh>
         </group>
-
-        {/* --- NECK --- */}
-        <Cylinder args={[0.1, 0.1, 0.6]} position={[0, 3.3, 0]}><meshStandardMaterial color="#222" metalness={1} /></Cylinder>
-        
-        {/* --- TORSO --- */}
-        <RoundedBox args={[0.9, 1.8, 0.5]} radius={0.1} position={[0, 2.3, 0]}>
-             <meshStandardMaterial color="#c0c0c0" metalness={0.6} roughness={0.4} />
-        </RoundedBox>
-        
-        {/* --- SHOULDERS --- */}
-        <RoundedBox args={[1.5, 0.4, 0.6]} radius={0.1} position={[0, 3.1, 0]}>
-             <meshStandardMaterial color="#444" metalness={0.5} />
-        </RoundedBox>
-
-        {/* --- ARMS --- */}
-        {/* Left Arm */}
-        <group position={[-0.85, 2.9, 0]} rotation={[0, 0, 0.1]}>
-            <Cylinder args={[0.12, 0.1, 1.4]} position={[0, -0.6, 0]}><meshStandardMaterial color="#c0c0c0" metalness={0.6} /></Cylinder>
-            <Sphere args={[0.15]} position={[0, -1.4, 0]}><meshStandardMaterial color="#333" /></Sphere> {/* Hand */}
-        </group>
-        {/* Right Arm */}
-        <group position={[0.85, 2.9, 0]} rotation={[0, 0, -0.1]}>
-            <Cylinder args={[0.12, 0.1, 1.4]} position={[0, -0.6, 0]}><meshStandardMaterial color="#c0c0c0" metalness={0.6} /></Cylinder>
-            <Sphere args={[0.15]} position={[0, -1.4, 0]}><meshStandardMaterial color="#333" /></Sphere> {/* Hand */}
-        </group>
-
-        {/* --- LEGS --- */}
-        {/* Left Leg */}
-        <Cylinder args={[0.15, 0.12, 1.6]} position={[-0.25, 0.8, 0]}><meshStandardMaterial color="#333" /></Cylinder>
-        {/* Right Leg */}
-        <Cylinder args={[0.15, 0.12, 1.6]} position={[0.25, 0.8, 0]}><meshStandardMaterial color="#333" /></Cylinder>
-
-        {/* --- FEET --- */}
-        <Box args={[0.35, 0.15, 0.6]} position={[-0.25, 0.075, 0.15]}><meshStandardMaterial color="#111" /></Box>
-        <Box args={[0.35, 0.15, 0.6]} position={[0.25, 0.075, 0.15]}><meshStandardMaterial color="#111" /></Box>
+        {/* Neck */}
+        <Cylinder args={[0.1, 0.1, 0.6]} position={[0, 1.8, 0]}><meshStandardMaterial color="#222" metalness={1} /></Cylinder>
+        {/* Body */}
+        <RoundedBox args={[0.9, 1.8, 0.5]} radius={0.1} position={[0, 0.8, 0]}><meshStandardMaterial color="#c0c0c0" metalness={0.6} roughness={0.4} /></RoundedBox>
+        <RoundedBox args={[1.3, 0.4, 0.6]} radius={0.1} position={[0, 1.6, 0]}><meshStandardMaterial color="#444" metalness={0.5} /></RoundedBox>
     </group>
   );
 }
 
 // ==========================================
-// TALL PLAYER DROID (With Legs & Arms)
+// TALL PLAYER DROID (Red Theme, Full Body)
 // ==========================================
 function PlayerDroid({ position, isTalking }) {
   const group = useRef();
@@ -218,7 +169,7 @@ function PlayerDroid({ position, isTalking }) {
   useFrame((state) => {
     if (!group.current) return;
     const t = state.clock.getElapsedTime();
-    group.current.position.y = position[1] + Math.sin(t * 1.8) * 0.03;
+    group.current.position.y = position[1] + 0.15;
     if (isTalking) {
         group.current.scale.setScalar(1.02);
     } else {
@@ -228,105 +179,89 @@ function PlayerDroid({ position, isTalking }) {
 
   return (
     <group ref={group} position={position}>
-        {/* --- HEAD --- */}
-        <Sphere args={[0.45, 32, 32]} position={[0, 3.9, 0]}>
-            <meshStandardMaterial color="#ff4444" metalness={0.8} roughness={0.2} />
-        </Sphere>
-        {/* Visor */}
-        <mesh position={[0, 3.9, 0.4]}>
-            <boxGeometry args={[0.6, 0.15, 0.1]} />
-            <meshBasicMaterial color={isTalking ? "#ff0000" : "#550000"} toneMapped={false} />
-        </mesh>
+        {/* Head */}
+        <group position={[0, 2.4, 0]}>
+            <RoundedBox args={[0.7, 0.9, 0.7]} radius={0.1}>
+                {/* Dark Red Head */}
+                <meshStandardMaterial color="#8b0000" metalness={0.6} roughness={0.3} />
+            </RoundedBox>
+            {/* Eyes (Glow Red when talking) */}
+            <mesh position={[-0.15, 0.1, 0.36]}><circleGeometry args={[0.08]} /><meshBasicMaterial color={isTalking ? "#ff0000" : "#330000"} toneMapped={false} /></mesh>
+            <mesh position={[0.15, 0.1, 0.36]}><circleGeometry args={[0.08]} /><meshBasicMaterial color={isTalking ? "#ff0000" : "#330000"} toneMapped={false} /></mesh>
+        </group>
         
-        {/* --- NECK --- */}
-        <Cylinder args={[0.1, 0.1, 0.6]} position={[0, 3.3, 0]}><meshStandardMaterial color="#222" metalness={1} /></Cylinder>
+        {/* Neck */}
+        <Cylinder args={[0.1, 0.1, 0.6]} position={[0, 1.8, 0]}><meshStandardMaterial color="#222" metalness={1} /></Cylinder>
+        
+        {/* Body (Reddish Brown) */}
+        <RoundedBox args={[0.9, 1.8, 0.5]} radius={0.1} position={[0, 0.8, 0]}>
+             <meshStandardMaterial color="#a52a2a" metalness={0.5} roughness={0.4} />
+        </RoundedBox>
+        
+        {/* Shoulders (Darker Red) */}
+        <RoundedBox args={[1.3, 0.4, 0.6]} radius={0.1} position={[0, 1.6, 0]}>
+             <meshStandardMaterial color="#500000" metalness={0.5} />
+        </RoundedBox>
 
-        {/* --- TORSO --- */}
-        <Cylinder args={[0.3, 0.2, 1.8]} position={[0, 2.3, 0]}>
-             <meshStandardMaterial color="#333" metalness={0.8} roughness={0.5} />
-        </Cylinder>
-
-        {/* Floating Rings */}
-        <Torus args={[0.5, 0.03, 16, 32]} rotation={[Math.PI/2, 0, 0]} position={[0, 1.6, 0]}><meshBasicMaterial color="#ff0000" toneMapped={false} /></Torus>
-        <Torus args={[0.5, 0.03, 16, 32]} rotation={[Math.PI/2, 0, 0]} position={[0, 3.0, 0]}><meshBasicMaterial color="#ff0000" toneMapped={false} /></Torus>
-
-        {/* --- SHOULDERS --- */}
-        <Box args={[1.2, 0.3, 0.5]} position={[0, 3.1, 0]}><meshStandardMaterial color="#500000" /></Box>
-
-        {/* --- ARMS --- */}
-        {/* Left Arm */}
-        <group position={[-0.7, 2.9, 0]} rotation={[0, 0, 0.1]}>
-            <Cylinder args={[0.1, 0.08, 1.3]} position={[0, -0.6, 0]}><meshStandardMaterial color="#a52a2a" /></Cylinder>
-            <Sphere args={[0.12]} position={[0, -1.3, 0]}><meshStandardMaterial color="#222" /></Sphere>
+        {/* Arms */}
+        <group position={[-0.8, 1.4, 0]} rotation={[0, 0, 0.1]}>
+            <Cylinder args={[0.12, 0.1, 1.4]} position={[0, -0.6, 0]}><meshStandardMaterial color="#8b4513" /></Cylinder>
+            <Sphere args={[0.15]} position={[0, -1.4, 0]}><meshStandardMaterial color="#222" /></Sphere>
         </group>
-        {/* Right Arm */}
-        <group position={[0.7, 2.9, 0]} rotation={[0, 0, -0.1]}>
-            <Cylinder args={[0.1, 0.08, 1.3]} position={[0, -0.6, 0]}><meshStandardMaterial color="#a52a2a" /></Cylinder>
-            <Sphere args={[0.12]} position={[0, -1.3, 0]}><meshStandardMaterial color="#222" /></Sphere>
+        <group position={[0.8, 1.4, 0]} rotation={[0, 0, -0.1]}>
+            <Cylinder args={[0.12, 0.1, 1.4]} position={[0, -0.6, 0]}><meshStandardMaterial color="#8b4513" /></Cylinder>
+            <Sphere args={[0.15]} position={[0, -1.4, 0]}><meshStandardMaterial color="#222" /></Sphere>
         </group>
 
-        {/* --- LEGS --- */}
-        <Cylinder args={[0.14, 0.1, 1.6]} position={[-0.25, 0.8, 0]}><meshStandardMaterial color="#222" /></Cylinder>
-        <Cylinder args={[0.14, 0.1, 1.6]} position={[0.25, 0.8, 0]}><meshStandardMaterial color="#222" /></Cylinder>
+        {/* Legs */}
+        <Cylinder args={[0.14, 0.1, 1.6]} position={[-0.25, -0.8, 0]}><meshStandardMaterial color="#222" /></Cylinder>
+        <Cylinder args={[0.14, 0.1, 1.6]} position={[0.25, -0.8, 0]}><meshStandardMaterial color="#222" /></Cylinder>
 
-        {/* --- FEET --- */}
-        <RoundedBox args={[0.3, 0.15, 0.5]} radius={0.05} position={[-0.25, 0.075, 0.15]}><meshStandardMaterial color="#111" /></RoundedBox>
-        <RoundedBox args={[0.3, 0.15, 0.5]} radius={0.05} position={[0.25, 0.075, 0.15]}><meshStandardMaterial color="#111" /></RoundedBox>
+        {/* Feet */}
+        <RoundedBox args={[0.3, 0.15, 0.5]} radius={0.05} position={[-0.25, -1.6, 0.15]}><meshStandardMaterial color="#111" /></RoundedBox>
+        <RoundedBox args={[0.3, 0.15, 0.5]} radius={0.05} position={[0.25, -1.6, 0.15]}><meshStandardMaterial color="#111" /></RoundedBox>
     </group>
   );
 }
 
 // ==========================================
-// OPEN STAGE SCENE (OUTDOORS)
+// STAGE SCENE
 // ==========================================
 function ImprovStage({ speaking, recording, scenarioText }) {
   return (
     <>
       <ambientLight intensity={0.3} />
       
-      {/* Outdoor Sun/Moon Light */}
-      <directionalLight position={[10, 10, 5]} intensity={1} color="#ffdca8" castShadow />
+      {/* Fill Lights */}
+      <SpotLight position={[-6, 6, 6]} angle={0.5} penumbra={1} intensity={50} color="#ffbd59" target-position={[-3, 0.5, 0]} />
+      <SpotLight position={[6, 6, 6]} angle={0.5} penumbra={1} intensity={50} color="#ff4444" target-position={[3, 0.5, 0]} />
+      <SpotLight position={[0, 6, -8]} angle={1} intensity={100} color="#aaaaff" target-position={[0, 1, 0]} />
 
-      {/* Spotlights for Characters */}
+      {/* FOCUS SPOTLIGHTS */}
       <SpotLight position={[-3, 10, 4]} angle={0.2} penumbra={0.2} intensity={speaking ? 1500 : 0} castShadow color="white" target-position={[-3, 1.5, 0]} />
       <SpotLight position={[3, 10, 4]} angle={0.2} penumbra={0.2} intensity={recording ? 1500 : 0} castShadow color="white" target-position={[3, 1.5, 0]} />
 
-      {/* OPEN ENVIRONMENT: Sunset Sky */}
       <Environment preset="sunset" background blur={0.6} />
-      {/* Light Fog to blend floor with horizon */}
       <fog attach="fog" args={['#202030', 10, 60]} />
 
-      {/* STAGE FLOOR (Circular Open Stage) */}
+      {/* STAGE FLOOR */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.01, 0]} receiveShadow>
         <circleGeometry args={[15, 64]} />
-        <meshStandardMaterial 
-            color="#1a1a1a" 
-            roughness={0.2} 
-            metalness={0.5} 
-        />
+        <meshStandardMaterial color="#1a1a1a" roughness={0.2} metalness={0.5} />
       </mesh>
       
-      {/* Decorative Floor Ring */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
         <torusGeometry args={[14.8, 0.2, 16, 100]} />
         <meshStandardMaterial color="#333" emissive="#555" emissiveIntensity={0.5} />
       </mesh>
 
-      {/* Props & Characters */}
       <TvScreen text={scenarioText} />
       <HostDesk />
 
-      {/* Player Mic Stand */}
-      <group position={[3, 0, 0.4]} rotation={[0, -0.3, 0]}>
-        {/* Pole: Taller (4.5 units) and Dark Gray (#333) */}
-        <Cylinder args={[0.03, 0.03, 5]} position={[0, 1, 0]} castShadow>
-            <meshStandardMaterial color="#333" metalness={0.9} />
-        </Cylinder>
-        {/* Base */}
-        <Cylinder args={[0.6, 0.6, 0.05]} position={[0, 0.025, 0]} receiveShadow>
-            <meshStandardMaterial color="#222" />
-        </Cylinder>
-        {/* Mic Head: Moved up to 4.5 */}
+      {/* REALISTIC MIC STAND */}
+      <group position={[3, 0, 0.5]} rotation={[0, -0.3, 0]}>
+        <Cylinder args={[0.03, 0.03, 5]} position={[0, 1, 0]} castShadow><meshStandardMaterial color="#333" metalness={0.9} /></Cylinder>
+        <Cylinder args={[0.6, 0.6, 0.05]} position={[0, 0.025, 0]} receiveShadow><meshStandardMaterial color="#222" /></Cylinder>
         <Sphere args={[0.18]} position={[0, 3.5, 0]}>
             <meshStandardMaterial 
                 color={recording ? "#ef4444" : "#888"} 
@@ -336,8 +271,14 @@ function ImprovStage({ speaking, recording, scenarioText }) {
         </Sphere>
       </group>
 
+      <group position={[0, 0, -8]}>
+        <Cylinder args={[0.15, 0.15, 14]} position={[-6, 7, 0]}><meshStandardMaterial color="#222" metalness={1}/></Cylinder>
+        <Cylinder args={[0.15, 0.15, 14]} position={[6, 7, 0]}><meshStandardMaterial color="#222" metalness={1}/></Cylinder>
+        <Cylinder args={[0.15, 0.15, 12]} rotation={[0, 0, Math.PI/2]} position={[0, 14, 0]}><meshStandardMaterial color="#222" metalness={1}/></Cylinder>
+      </group>
+
       <HostDroid position={[-3, 0, -1]} isTalking={speaking} />
-      <PlayerDroid position={[3, 0, -1]} isTalking={recording} />
+      <PlayerDroid position={[3, 1.5, -1]} isTalking={recording} />
     </>
   );
 }
@@ -358,6 +299,7 @@ export default function Home() {
   const [gameState, setGameState] = useState({ round: 0, phase: 'start', userName: '', currentScenario: '', isGameOver: false });
 
   const audioRef = useRef(null);
+  const clapRef = useRef(null); // Ref for Clap Sound
   const recorder = useRef(null);
   const audioContextRef = useRef(null);
   const sessionActiveRef = useRef(false);
@@ -397,6 +339,13 @@ export default function Home() {
     detect();
   };
 
+  const playClap = () => {
+    if (clapRef.current) {
+        clapRef.current.currentTime = 0;
+        clapRef.current.play().catch(e => console.log("Clap blocked"));
+    }
+  };
+
   const startRecording = async () => {
     try {
       setUserTranscript(""); 
@@ -408,6 +357,10 @@ export default function Home() {
       mediaRecorder.onstop = async () => {
         if (audioContextRef.current?.state !== 'closed') audioContextRef.current?.close();
         stream.getTracks().forEach(t => t.stop());
+        
+        // PLAY CLAP WHEN RECORDING STOPS
+        playClap();
+
         if (!sessionActiveRef.current) return;
         const blob = new Blob(chunks, { type: 'audio/webm' });
         if (blob.size > 0) await processCommand(blob);
@@ -561,7 +514,11 @@ export default function Home() {
           </div>
         </div>
         
+        {/* AUDIO FOR HOST */}
         <audio ref={audioRef} className="hidden" />
+        
+        {/* AUDIO FOR AUDIENCE CLAP */}
+        <audio ref={clapRef} src="https://www.soundjay.com/human/sounds/applause-01.mp3" className="hidden" />
 
         <style jsx global>{`
             @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;700;900&display=swap');

@@ -49,7 +49,7 @@ export async function POST(req) {
         promptContext = `
         PHASE: INTRO_ASK_NAME
         ACTION: 
-        1. Speak in Hinglish: "Namaskar Dosto! Murfs Got Latent mein swagat hai! Main hoon aapka Host Samay Raina."
+        1. Speak in Hinglish: "Namaste Dosto! Murfs Got Latent mein swagat hai! Main hoon aapka Host Samay Raina."
         2. Subtitle (Hindi): "नमस्ते दोस्तों! Murf's Got Latent में स्वागत है! मैं हूँ आपका होस्ट समय रैना।"
         3. Ask Name: "Shuru karne se pehle, apna naam batayein."
         4. Subtitle Ask: "शुरू करने से पहले, अपना नाम बताएं।"
