@@ -8,10 +8,10 @@
   },
   {
     "id": 2,
-    "role": "Strict Teacher",
-    "prompt_hinglish": "Aap ek strict exam invigilator hain. Aapne mujhe cheating karte hue pakad liya hai. Mujhe daantiye!",
-    "prompt_hindi": "आप एक सख्त टीचर हैं। आपने मुझे चीटिंग करते हुए पकड़ लिया है। मुझे डांटिये!",
-    "screen_text": "ROLE: STRICT TEACHER"
+    "role": "Nakhrebaaz Auto Driver",
+    "prompt_hinglish": "Aap Mumbai ke ek attitude waale Auto-Driver hain. Customer ko Andheri jaane se mana karein aur ridiculous reasons dein (jaise 'waha ki hawa kharab hai').",
+    "prompt_hindi": "आप एक नखरेबाज़ ऑटो वाले हैं। सवारी को ले जाने से मना करें और अजीब बहाने बनाएँ।",
+    "screen_text": "ROLE: NAKHREBAAZ AUTO WALA"
   },
   {
     "id": 3,
